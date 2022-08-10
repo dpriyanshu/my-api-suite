@@ -1,0 +1,21 @@
+[
+    {
+        "RequestHeader": {
+            "agencyID": 103
+        },
+        "user": {
+            "email": "r4e-tenant-actions_postman_suite+103@reputation.com",
+            "firstName": "Agency",
+            "lastName": "User 103",
+            "roleIDs":[
+                "Admin",
+                "User"
+            ],
+            "locale": "en_US",
+            "scopes": null,
+            "agencyID": 103,
+            "active": true,
+            "notified": true
+        }
+    }
+]

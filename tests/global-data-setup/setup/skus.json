@@ -1,0 +1,41 @@
+[
+    {
+        "RequestHeader": {
+          "agencyID": 103,
+          "loggedUserID": -1,
+          "loggedTenantID": -1
+        },
+        "sku": {
+          "id": "Actions-SKU",
+          "name": "Actions-SKU",
+          "moduleIDs":[       
+            "ticket-basic",
+            "ticket-managing",
+            "analytic-operating",
+            "analytic-experience",
+            "analytic-reporting",
+            "analytic-voice-of-customer",
+            "competitive-insights-basic",
+            "analytic-traffic",
+            "platform-customers",
+            "platform-dashboarding",
+            "platform-inbox",
+            "platform-managing",
+            "platform-review-booster",
+            "platform-search-accelerator",
+            "platform-suggested-responding",
+            "platform-syndication",
+            "score-basic",
+            "analytic-scoring",
+            "score-prescriptive",
+            "survey-legacy-monitoring",
+            "task-fulfilling"
+        ],
+          "sourceIDs": [
+            "Kiosk",
+            "SOCIAL",
+            "SURVEY"
+          ]
+        }
+      }
+]

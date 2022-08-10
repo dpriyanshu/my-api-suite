@@ -1,0 +1,1070 @@
+{
+  "id": "8c1bf131-a7ec-4485-8fc6-a6f63f853110",
+  "values": [
+    {
+      "key": "singleDataFile",
+      "value": "true",
+      "enabled": true
+    },
+    {
+      "key": "r4e-admin",
+      "value": "r4e-admin.{{env}}.svc.reputation.test:8080",
+      "enabled": true
+    },
+    {
+      "key": "r4e-request",
+      "value": "r4e-request.{{env}}.svc.reputation.test:8080",
+      "enabled": true
+    },
+    {
+      "key": "r4e-survey3-frontend",
+      "value": "r4e-survey3-frontend.{{env}}.svc.reputation.test:8080",
+      "enabled": true
+    },
+    {
+      "key": "r4e-location-backend",
+      "value": "r4e-location-frontend.{{env}}.svc.reputation.test:8080",
+      "enabled": true
+    },
+    {
+      "key": "r4e-social-content-repo",
+      "value": "r4e-social-content-repo.{{env}}.svc.reputation.test:8080",
+      "enabled": true
+    },
+    {
+      "key": "r4e-template",
+      "value": "r4e-template.{{env}}.svc.reputation.test:8080",
+      "enabled": true
+    },
+    {
+      "key": "r4e-integrator2",
+      "value": "r4e-integrator2.{{env}}.svc.reputation.test:8080",
+      "enabled": true
+    },
+    {
+      "key": "r4e-profile-publish",
+      "value": "r4e-profile-publish.{{env}}.svc.reputation.test:8080",
+      "enabled": true
+    },
+    {
+      "key": "r4e-user",
+      "value": "r4e-user.{{env}}.svc.reputation.test:8080",
+      "enabled": true
+    },
+    {
+      "key": "r4e-pages",
+      "value": "r4e-pages-core.{{env}}.svc.reputation.test:8080",
+      "enabled": true
+    },
+    {
+      "key": "r4e-credential-two",
+      "value": "r4e-credential-two.{{env}}.svc.reputation.test:8080",
+      "enabled": true
+    },
+    {
+      "key": "r4e-credential",
+      "value": "r4e-credential-backend.{{env}}.svc.reputation.test:8080",
+      "enabled": true
+    },
+    {
+      "key": "r4e-external-entity",
+      "value": "r4e-external-entity.{{env}}.svc.reputation.test:8080",
+      "enabled": true
+    },
+    {
+      "key": "r4e-search-insights",
+      "value": "r4e-search-insights.{{env}}.svc.reputation.test:8080",
+      "enabled": true
+    },
+    {
+      "key": "getTenant",
+      "value": "rest2thrift/R4EAdmin/getTenant",
+      "enabled": true
+    },
+    {
+      "key": "createTenant",
+      "value": "rest2thrift/R4EAdmin/saveTenant",
+      "enabled": true
+    },
+    {
+      "key": "saveLocation",
+      "value": "rest2thrift/R4ELocation/saveLocation",
+      "enabled": true
+    },
+    {
+      "key": "deleteTenant",
+      "value": "rest2thrift/R4EAdmin/deleteTenant",
+      "enabled": true
+    },
+    {
+      "key": "getUsersByEmail",
+      "value": "rest2thrift/R4EUser/getUsersByEmail",
+      "enabled": true
+    },
+    {
+      "key": "saveTag",
+      "value": "rest2thrift/SocialContentRepo/saveTag",
+      "enabled": true
+    },
+    {
+      "key": "saveAsset",
+      "value": "rest2thrift/SocialContentRepo/saveAsset",
+      "enabled": true
+    },
+    {
+      "key": "deleteAsset",
+      "value": "rest2thrift/SocialContentRepo/removeAsset",
+      "enabled": true
+    },
+    {
+      "key": "deleteTag",
+      "value": "rest2thrift/SocialContentRepo/removeTag",
+      "enabled": true
+    },
+    {
+      "key": "getSyndicationConfig",
+      "value": "rest2thrift/R4ESurvey3/getSyndicationConfig",
+      "enabled": true
+    },
+    {
+      "key": "getViewsAPI",
+      "value": "rest2thrift/R4ESurvey3/getViews",
+      "enabled": true
+    },
+    {
+      "key": "searchTags",
+      "value": "rest2thrift/SocialContentRepo/searchTags",
+      "enabled": true
+    },
+    {
+      "key": "searchAgencies",
+      "value": "rest2thrift/R4EAdmin/searchAgencies",
+      "enabled": true
+    },
+    {
+      "key": "saveAgency",
+      "value": "rest2thrift/R4EAdmin/saveAgency",
+      "enabled": true
+    },
+    {
+      "key": "getTenantApiKey",
+      "value": "rest2thrift/R4EAdmin/getTenantApiKey",
+      "enabled": true
+    },
+    {
+      "key": "saveSurveyTemplate",
+      "value": "rest2thrift/R4ESurvey3/saveSurveyTemplate",
+      "enabled": true
+    },
+    {
+      "key": "deleteSurveyTemplate",
+      "value": "rest2thrift/R4ESurvey3/removeSurveyTemplate",
+      "enabled": true
+    },
+    {
+      "key": "removeSurveyResult",
+      "value": "rest2thrift/R4ESurvey3/removeSurveyResult",
+      "enabled": true
+    },
+    {
+      "key": "saveSKU",
+      "value": "rest2thrift/R4EAdmin/saveSku",
+      "enabled": true
+    },
+    {
+      "key": "saveUser",
+      "value": "rest2thrift/R4EUser/saveUser",
+      "enabled": true
+    },
+    {
+      "key": "searchUsers",
+      "value": "rest2thrift/R4EUser/searchUsers",
+      "enabled": true
+    },
+    {
+      "key": "saveLocationPages",
+      "value": "rest2thrift/R4ELocation/saveLocationPages",
+      "enabled": true
+    },
+    {
+      "key": "getLocationByCode",
+      "value": "rest2thrift/R4ELocation/getLocationByCode",
+      "enabled": true
+    },
+    {
+      "key": "saveRole",
+      "value": "rest2thrift/R4EAdmin/saveRole",
+      "enabled": true
+    },
+    {
+      "key": "searchRoles",
+      "value": "rest2thrift/R4EAdmin/searchRoles",
+      "enabled": true
+    },
+    {
+      "key": "changePassword",
+      "value": "rest2thrift/R4EUser/changePassword",
+      "enabled": true
+    },
+    {
+      "key": "r4e-actions",
+      "value": "r4e-ticket-frontend.{{env}}.svc.reputation.test:8080",
+      "enabled": true
+    },
+    {
+      "key": "searchQueues",
+      "value": "rest2thrift/R4ETicket/searchQueues",
+      "enabled": true
+    },
+    {
+      "key": "getQueue",
+      "value": "rest2thrift/R4ETicket/getQueue",
+      "enabled": true
+    },
+    {
+      "key": "searchStages",
+      "value": "rest2thrift/R4ETicket/searchStages",
+      "enabled": true
+    },
+    {
+      "key": "saveQueue",
+      "value": "rest2thrift/R4ETicket/saveQueue",
+      "enabled": true
+    },
+    {
+      "key": "removeQueue",
+      "value": "rest2thrift/R4ETicket/removeQueue",
+      "enabled": true
+    },
+    {
+      "key": "saveStage",
+      "value": "rest2thrift/R4ETicket/saveStage",
+      "enabled": true
+    },
+    {
+      "key": "saveTicket",
+      "value": "rest2thrift/R4ETicket/saveTicket",
+      "enabled": true
+    },
+    {
+      "key": "getTicket",
+      "value": "rest2thrift/R4ETicket/getTicket",
+      "enabled": true
+    },
+    {
+      "key": "removeStage",
+      "value": "rest2thrift/R4ETicket/removeStage",
+      "enabled": true
+    },
+    {
+      "key": "removeTicket",
+      "value": "rest2thrift/R4ETicket/hardRemoveTicketData",
+      "enabled": true
+    },
+    {
+      "key": "apiHost",
+      "value": "api.{{env}}.reputation.com",
+      "enabled": true
+    },
+    {
+      "key": "v3_users",
+      "value": "v3/users",
+      "enabled": true
+    },
+    {
+      "key": "v3_locations",
+      "value": "v3/locations",
+      "enabled": true
+    },
+    {
+      "key": "getLocationPagesByUid",
+      "value": "rest2thrift/R4ELocation/getLocationPagesByUid",
+      "enabled": true
+    },
+    {
+      "key": "v3_ticket_stages",
+      "value": "v3/ticket-stages",
+      "enabled": true
+    },
+    {
+      "key": "v3_ticket_queues",
+      "value": "v3/ticket-queues",
+      "enabled": true
+    },
+    {
+      "key": "v3_tickets",
+      "value": "v3/tickets",
+      "enabled": true
+    },
+    {
+      "key": "v3_ticket_types",
+      "value": "v3/ticket-types",
+      "enabled": true
+    },
+    {
+      "key": "exportProfiles",
+      "value": "rest2thrift/R4EProfilePublish/exportProfiles",
+      "enabled": true
+    },
+    {
+      "key": "addTemplateConfiguration",
+      "value": "rest2thrift/R4EPagesCore/addTemplateConfiguration",
+      "enabled": true
+    },
+    {
+      "key": "updateTemplateConfiguration",
+      "value": "rest2thrift/R4EPagesCore/updateTemplateConfiguration",
+      "enabled": true
+    },
+    {
+      "key": "getTemplateConfiguration",
+      "value": "rest2thrift/R4EPagesCore/getTemplateConfiguration",
+      "enabled": true
+    },
+    {
+      "key": "getTemplateConfigurations",
+      "value": "rest2thrift/R4EPagesCore/getTemplateConfigurations",
+      "enabled": true
+    },
+    {
+      "key": "getTemplateConfigurationWithLocationUIDs",
+      "value": "rest2thrift/R4EPagesCore/getTemplateConfigurationsWithLocationUids",
+      "enabled": true
+    },
+    {
+      "key": "removeTemplateConfigurationByID",
+      "value": "rest2thrift/R4EPagesCore/removeTemplateConfigurationById",
+      "enabled": true
+    },
+    {
+      "key": "getTemplateConfigurationForProfileURL",
+      "value": "rest2thrift/R4EPagesCore/getTemplateConfigurationForProfileURL",
+      "enabled": true
+    },
+    {
+      "key": "addPagesSetting",
+      "value": "rest2thrift/R4EPagesCore/addPagesSetting",
+      "enabled": true
+    },
+    {
+      "key": "updatePagesSetting",
+      "value": "rest2thrift/R4EPagesCore/updatePagesSetting",
+      "enabled": true
+    },
+    {
+      "key": "getPagesSetting",
+      "value": "rest2thrift/R4EPagesCore/getPagesSetting",
+      "enabled": true
+    },
+    {
+      "key": "saveTags",
+      "value": "rest2thrift/SocialContentRepo/saveTags",
+      "enabled": true
+    },
+    {
+      "key": "searchAsset",
+      "value": "rest2thrift/SocialContentRepo/searchAsset",
+      "enabled": true
+    },
+    {
+      "key": "saveRSS",
+      "value": "rest2thrift/SocialContentRepo/saveRSS",
+      "enabled": true
+    },
+    {
+      "key": "saveLabel",
+      "value": "rest2thrift/SocialContentRepo/saveLabel",
+      "enabled": true
+    },
+    {
+      "key": "addURLExpression",
+      "value": "rest2thrift/R4EPagesCore/addURLExpression",
+      "enabled": true
+    },
+    {
+      "key": "updateURLExpression",
+      "value": "rest2thrift/R4EPagesCore/updateURLExpression",
+      "enabled": true
+    },
+    {
+      "key": "getURLExpression",
+      "value": "rest2thrift/R4EPagesCore/getURLExpression",
+      "enabled": true
+    },
+    {
+      "key": "removeURLExpression",
+      "value": "rest2thrift/R4EPagesCore/rest2thrift/R4EPagesCore/removeURLExpression",
+      "enabled": true
+    },
+    {
+      "key": "addURL",
+      "value": "rest2thrift/R4EPagesCore/addURL",
+      "enabled": true
+    },
+    {
+      "key": "removeLabel",
+      "value": "rest2thrift/SocialContentRepo/removeLabel",
+      "enabled": true
+    },
+    {
+      "key": "r4e-customer",
+      "value": "r4e-customer.{{env}}.svc.reputation.test:8080",
+      "enabled": true
+    },
+    {
+      "key": "saveCustomer",
+      "value": "rest2thrift/R4ECustomer/saveCustomer",
+      "enabled": true
+    },
+    {
+      "key": "r4e-comment-two",
+      "value": "r4e-comment-two-backend.{{env}}.svc.reputation.test:8080",
+      "enabled": true
+    },
+    {
+      "key": "saveComment",
+      "value": "rest2thrift/R4EComment2/saveComment",
+      "enabled": true
+    },
+    {
+      "key": "getComment",
+      "value": "rest2thrift/R4EComment2/getComment",
+      "enabled": true
+    },
+    {
+      "key": "saveRawComment",
+      "value": "rest2thrift/R4EComment2/saveRawComment",
+      "enabled": true
+    },
+    {
+      "key": "r4e-keyword",
+      "value": "r4e-keyword-frontend.{{env}}.svc.reputation.test:8080",
+      "enabled": true
+    },
+    {
+      "key": "getIndustryCategory",
+      "value": "rest2thrift/R4EKeyword/getIndustryCategory",
+      "enabled": true
+    },
+    {
+      "key": "searchCategories",
+      "value": "rest2thrift/R4EKeyword/searchCategories",
+      "enabled": true
+    },
+    {
+      "key": "getCategory",
+      "value": "rest2thrift/R4EKeyword/getCategory",
+      "enabled": true
+    },
+    {
+      "key": "searchIndustryCategories",
+      "value": "rest2thrift/R4EKeyword/searchIndustryCategories",
+      "enabled": true
+    },
+    {
+      "key": "getSurveyTemplate",
+      "value": "rest2thrift/R4ESurvey3/getSurveyTemplate",
+      "enabled": true
+    },
+    {
+      "key": "generateMockSurveyAnswers",
+      "value": "rest2thrift/R4ESurvey3/generateMockSurveyAnswers",
+      "enabled": true
+    },
+    {
+      "key": "removeSurveyTemplate",
+      "value": "rest2thrift/R4ESurvey3/removeSurveyTemplate",
+      "enabled": true
+    },
+    {
+      "key": "saveSurveyResult",
+      "value": "rest2thrift/R4ESurvey3/saveSurveyResult",
+      "enabled": true
+    },
+    {
+      "key": "generateMockSurveyResult",
+      "value": "rest2thrift/R4ESurvey3/generateMockSurveyResult",
+      "enabled": true
+    },
+    {
+      "key": "getSurveyResult",
+      "value": "rest2thrift/R4ESurvey3/getSurveyResult",
+      "enabled": true
+    },
+    {
+      "key": "getSurveyResultsWithDataText",
+      "value": "rest2thrift/R4ESurvey3/getSurveyResultsWithDataText",
+      "enabled": true
+    },
+    {
+      "key": "createSurveyResult",
+      "value": "rest2thrift/R4ESurvey3/createSurveyResult",
+      "enabled": true
+    },
+    {
+      "key": "searchSurveyTemplates",
+      "value": "rest2thrift/R4ESurvey3/searchSurveyTemplates",
+      "enabled": true
+    },
+    {
+      "key": "searchSurveyResults",
+      "value": "rest2thrift/R4ESurvey3/searchSurveyResults",
+      "enabled": true
+    },
+    {
+      "key": "setLabel",
+      "value": "rest2thrift/R4EComment2/setLabel",
+      "enabled": true
+    },
+    {
+      "key": "unsetLabel",
+      "value": "rest2thrift/R4EComment2/unsetLabel",
+      "enabled": true
+    },
+    {
+      "key": "r4e-object-privilege",
+      "value": "r4e-object-privilege.{{env}}.svc.reputation.test:8080",
+      "enabled": true
+    },
+    {
+      "key": "countAssets",
+      "value": "rest2thrift/SocialContentRepo/countAssets",
+      "enabled": true
+    },
+    {
+      "key": "countContent",
+      "value": "rest2thrift/SocialContentRepo/countContent",
+      "enabled": true
+    },
+    {
+      "key": "countPostLabels",
+      "value": "rest2thrift/SocialContentRepo/countPostLabels",
+      "enabled": true
+    },
+    {
+      "key": "displayAsset",
+      "value": "rest2thrift/SocialContentRepo/displayAsset",
+      "enabled": true
+    },
+    {
+      "key": "countTags",
+      "value": "rest2thrift/SocialContentRepo/countTags",
+      "enabled": true
+    },
+    {
+      "key": "countLabels",
+      "value": "rest2thrift/SocialContentRepo/countLabels",
+      "enabled": true
+    },
+    {
+      "key": "saveLabels",
+      "value": "rest2thrift/SocialContentRepo/saveLabels",
+      "enabled": true
+    },
+    {
+      "key": "saveContent",
+      "value": "rest2thrift/SocialContentRepo/saveContent",
+      "enabled": true
+    },
+    {
+      "key": "displayContent",
+      "value": "rest2thrift/SocialContentRepo/displayContent",
+      "enabled": true
+    },
+    {
+      "key": "getLabel",
+      "value": "rest2thrift/SocialContentRepo/getLabel",
+      "enabled": true
+    },
+    {
+      "key": "searchLabels",
+      "value": "rest2thrift/SocialContentRepo/searchLabels",
+      "enabled": true
+    },
+    {
+      "key": "searchContent",
+      "value": "rest2thrift/SocialContentRepo/searchContent",
+      "enabled": true
+    },
+    {
+      "key": "getContent",
+      "value": "rest2thrift/SocialContentRepo/getContent",
+      "enabled": true
+    },
+    {
+      "key": "removeContent",
+      "value": "rest2thrift/SocialContentRepo/removeContent",
+      "enabled": true
+    },
+    {
+      "key": "saveAssets2",
+      "value": "rest2thrift/SocialContentRepo/saveAssets2",
+      "enabled": true
+    },
+    {
+      "key": "saveConsent",
+      "value": "rest2thrift/SocialContentRepo/saveConsent",
+      "enabled": true
+    },
+    {
+      "key": "saveRSS",
+      "value": "rest2thrift/SocialContentRepo/saveRSS",
+      "enabled": true
+    },
+    {
+      "key": "getContentMetrics",
+      "value": "rest2thrift/SocialContentRepo/getContentMetrics",
+      "enabled": true
+    },
+    {
+      "key": "removeRSS",
+      "value": "rest2thrift/SocialContentRepo/removeRSS",
+      "enabled": true
+    },
+    {
+      "key": "displayRss",
+      "value": "rest2thrift/SocialContentRepo/displayRss",
+      "enabled": true
+    },
+    {
+      "key": "searchRSS",
+      "value": "rest2thrift/SocialContentRepo/searchRSS",
+      "enabled": true
+    },
+    {
+      "key": "pollRSS",
+      "value": "rest2thrift/SocialContentRepo/pollRSS",
+      "enabled": true
+    },
+    {
+      "key": "assign",
+      "value": "rest2thrift/R4EComment2/assign",
+      "enabled": true
+    },
+    {
+      "key": "assignTo",
+      "value": "rest2thrift/R4EComment2/assignTo",
+      "enabled": true
+    },
+    {
+      "key": "getOrCreateCustomer",
+      "value": "rest2thrift/R4ECustomer/getOrCreateCustomer",
+      "enabled": true
+    },
+    {
+      "key": "setDueDate",
+      "value": "rest2thrift/R4EComment2/setDueDate",
+      "enabled": true
+    },
+    {
+      "key": "unsetDueDate",
+      "value": "rest2thrift/R4EComment2/unsetDueDate",
+      "enabled": true
+    },
+    {
+      "key": "removeRawComment",
+      "value": "rest2thrift/R4EComment2/removeRawComment",
+      "enabled": true
+    },
+    {
+      "key": "removeCustomer",
+      "value": "rest2thrift/R4ECustomer/removeCustomer",
+      "enabled": true
+    },
+    {
+      "key": "saveComment",
+      "value": "rest2thrift/R4EComment2/saveComment",
+      "type": "default",
+      "enabled": true
+    },
+    {
+      "key": "generateFilters",
+      "value": "rest2thrift/R4EComment2/generateFilters",
+      "enabled": true
+    },
+    {
+      "key": "validateNotification",
+      "value": "rest2thrift/R4EComment2/validateNotification",
+      "enabled": true
+    },
+    {
+      "key": "getAncestors",
+      "value": "rest2thrift/R4EComment2/getAncestors",
+      "enabled": true
+    },
+    {
+      "key": "comment2GetVariables",
+      "value": "rest2thrift/R4EComment2/getVariables",
+      "enabled": true
+    },
+    {
+      "key": "saveCredential",
+      "value": "rest2thrift/R4ECredential2/saveCredential",
+      "enabled": true
+    },
+    {
+      "key": "deleteCredential",
+      "value": "rest2thrift/R4ECredential2/removeCredential",
+      "enabled": true
+    },
+    {
+      "key": "enqueuePublishJobSync",
+      "value": "rest2thrift/R4EProfilePublish/enqueuePublishJobSync",
+      "enabled": true
+    },
+    {
+      "key": "provisionUserFromSingleSignon",
+      "value": "rest2thrift/R4EUser/provisionUserFromSingleSignon",
+      "enabled": true
+    },
+    {
+      "key": "saveConfiguration",
+      "value": "rest2thrift/R4EIntegrator2/saveConfiguration",
+      "enabled": true
+    },
+    {
+      "key": "getIntegrations",
+      "value": "rest2thrift/R4EIntegrator2/getIntegrations",
+      "enabled": true
+    },
+    {
+      "key": "runConfigurationById",
+      "value": "rest2thrift/R4EIntegrator2/runConfigurationById",
+      "enabled": true
+    },
+    {
+      "key": "searchJobRuns",
+      "value": "rest2thrift/R4EIntegrator2/searchJobRuns",
+      "enabled": true
+    },
+    {
+      "key": "getImporterFileJobsByJobRunId",
+      "value": "rest2thrift/R4EIntegrator2/getImporterFileJobsByJobRunId",
+      "enabled": true
+    },
+    {
+      "key": "getJobRun",
+      "value": "rest2thrift/R4EIntegrator2/getJobRun",
+      "enabled": true
+    },
+    {
+      "key": "deleteJobRunHistory",
+      "value": "rest2thrift/R4EIntegrator2/deleteJobRunHistory",
+      "enabled": true
+    },
+    {
+      "key": "modifyIntegrationStatus",
+      "value": "rest2thrift/R4EIntegrator2/modifyIntegrationStatus",
+      "enabled": true
+    },
+    {
+      "key": "enqueuePublishJob",
+      "value": "rest2thrift/R4EProfilePublish/enqueuePublishJob",
+      "enabled": true
+    },
+    {
+      "key": "r4e-bl-fulfillment",
+      "value": "r4e-bl-fulfillment.{{env}}.svc.reputation.test:8080",
+      "enabled": true
+    },
+    {
+      "key": "forceSync",
+      "value": "rest2thrift/R4EBLFulfillment/forceSync",
+      "enabled": true
+    },
+    {
+      "key": "buildSurveyPlan",
+      "value": "rest2thrift/R4ESurvey3/buildSurveyPlan",
+      "enabled": true
+    },
+    {
+      "key": "countComments",
+      "value": "rest2thrift/R4ESurvey3/countComments",
+      "enabled": true
+    },
+    {
+      "key": "exportMockData",
+      "value": "rest2thrift/R4ESurvey3/exportMockData",
+      "enabled": true
+    },
+    {
+      "key": "exportSurveyResultsToFile",
+      "value": "rest2thrift/R4ESurvey3/exportSurveyResultsToFile",
+      "enabled": true
+    },
+    {
+      "key": "importSurveyResults",
+      "value": "rest2thrift/R4ESurvey3/importSurveyResults",
+      "enabled": true
+    },
+    {
+      "key": "r4e-locator",
+      "value": "r4e-locator-admin.{{env}}.svc.reputation.test:8080",
+      "enabled": true
+    },
+    {
+      "key": "forwardSurveyResult",
+      "value": "rest2thrift/R4ESurvey3/forwardSurveyResult",
+      "enabled": true
+    },
+    {
+      "key": "getRulesBuilderConfigurations",
+      "value": "rest2thrift/R4ESurvey3/getRulesBuilderConfigurations",
+      "enabled": true
+    },
+    {
+      "key": "getSurveyResultsWithDataText",
+      "value": "rest2thrift/R4ESurvey3/getSurveyResultsWithDataText",
+      "type": "default",
+      "enabled": true
+    },
+    {
+      "key": "getSurveyResultsWithPlans",
+      "value": "rest2thrift/R4ESurvey3/getSurveyResultsWithPlans",
+      "enabled": true
+    },
+    {
+      "key": "getViews",
+      "value": "rest2thrift/R4ESurvey3/getViews",
+      "enabled": true
+    },
+    {
+      "key": "saveView",
+      "value": "rest2thrift/R4ESurvey3/saveView",
+      "enabled": true
+    },
+    {
+      "key": "deleteView",
+      "value": "rest2thrift/R4ESurvey3/deleteView",
+      "enabled": true
+    },
+    {
+      "key": "saveSurveyResultWithActions",
+      "value": "rest2thrift/R4ESurvey3/saveSurveyResultWithActions",
+      "enabled": true
+    },
+    {
+      "key": "mediaFilePathForCSV",
+      "value": "https://app.{{env}}.reputation.com/csvs/",
+      "enabled": true
+    },
+    {
+      "key": "copySurveyTemplate",
+      "value": "rest2thrift/R4ESurvey3/copySurveyTemplate",
+      "enabled": true
+    },
+    {
+      "key": "validateScript",
+      "value": "rest2thrift/R4ESurvey3/validateScript",
+      "enabled": true
+    },
+    {
+      "key": "syncSurveyResults",
+      "value": "rest2thrift/R4ESurvey3/syncSurveyResults",
+      "enabled": true
+    },
+    {
+      "key": "syncSurveyTemplates",
+      "value": "rest2thrift/R4ESurvey3/syncSurveyTemplates",
+      "enabled": true
+    },
+    {
+      "key": "r4e-locator",
+      "value": "r4e-locator-admin.{{env}}.svc.reputation.test:8080",
+      "type": "default",
+      "enabled": true
+    },
+    {
+      "key": "createConfiguration",
+      "value": "rest2thrift/R4ELocatorAdmin/createConfiguration",
+      "enabled": true
+    },
+    {
+      "key": "searchRequestTemplates",
+      "value": "rest2thrift/R4ERequest/searchRequestTemplates",
+      "enabled": true
+    },
+    {
+      "key": "sendRequestReview",
+      "value": "rest2thrift/R4ESurvey3/sendRequestReview",
+      "enabled": true
+    },
+    {
+      "key": "saveTenantConfig",
+      "value": "rest2thrift/R4ESearchInsights/saveTenantConfig",
+      "enabled": true
+    },
+    {
+      "key": "saveLocationConfig",
+      "value": "rest2thrift/R4ESearchInsights/saveLocationConfig",
+      "enabled": true
+    },
+    {
+      "key": "getAdminConfig",
+      "value": "rest2thrift/R4ESearchInsights/getAdminConfig",
+      "enabled": true
+    },
+    {
+      "key": "bootstrapByTenant",
+      "value": "rest2thrift/R4ESearchInsights/bootstrapByTenant",
+      "enabled": true
+    },
+    {
+      "key": "aggregate",
+      "value": "rest2thrift/R4ESearchInsights/aggregate",
+      "enabled": true
+    },
+    {
+      "key": "saveFeatureFlag",
+      "value": "rest2thrift/R4EAdmin/saveFeatureFlag",
+      "type": "default",
+      "enabled": true
+    },
+    {
+      "key": "removeFeatureFlag",
+      "value": "rest2thrift/R4EAdmin/removeFeatureFlag",
+      "type": "default",
+      "enabled": true
+    },
+    {
+      "key": "searchProfilesElastic",
+      "value": "rest2thrift/R4ELocation/searchProfilesElastic",
+      "enabled": true
+    },
+    {
+      "key": "r4e-widget",
+      "value": "r4e-widget.{{env}}.svc.reputation.test:8080",
+      "enabled": true
+    },
+    {
+      "key": "saveWidget",
+      "value": "rest2thrift/R4EWidget/saveWidget",
+      "enabled": true
+    },
+    {
+      "key": "searchWidgets",
+      "value": "rest2thrift/R4EWidget/searchWidgets",
+      "enabled": true
+    },
+    {
+      "key": "getWidget",
+      "value": "rest2thrift/R4EWidget/getWidget",
+      "enabled": true
+    },
+    {
+      "key": "removeWidget",
+      "value": "rest2thrift/R4EWidget/removeWidget",
+      "enabled": true
+    },
+    {
+      "key": "searchWidgetTypes",
+      "value": "rest2thrift/R4EWidget/searchWidgetTypes",
+      "enabled": true
+    },
+    {
+      "key": "getWidgetType",
+      "value": "rest2thrift/R4EWidget/getWidgetType",
+      "enabled": true
+    },
+    {
+      "key": "comment2GetVariableValues",
+      "value": "rest2thrift/R4EComment2/getVariableValues",
+      "enabled": true
+    },
+    {
+      "key": "lockComment",
+      "value": "rest2thrift/R4EComment2/lockComment",
+      "enabled": true
+    },
+    {
+      "key": "unlockComment",
+      "value": "rest2thrift/R4EComment2/unlockComment",
+      "enabled": true
+    },
+    {
+      "key": "comment2RulesBuilderConditionConfigurations",
+      "value": "rest2thrift/R4EComment2/getRulesBuilderConditionConfigurations",
+      "enabled": true
+    },
+    {
+      "key": "comment2RulesBuilderAutomationConfigurations",
+      "value": "rest2thrift/R4EComment2/getRulesBuilderAutomationConfigurations",
+      "enabled": true
+    },
+    {
+      "key": "r4e-widget",
+      "value": "r4e-widget.{{env}}.svc.reputation.test:8080",
+      "enabled": true
+    },
+    {
+      "key": "saveWidget",
+      "value": "rest2thrift/R4EWidget/saveWidget",
+      "enabled": true
+    },
+    {
+      "key": "searchWidgets",
+      "value": "rest2thrift/R4EWidget/searchWidgets",
+      "enabled": true
+    },
+    {
+      "key": "getWidget",
+      "value": "rest2thrift/R4EWidget/getWidget",
+      "enabled": true
+    },
+    {
+      "key": "removeWidget",
+      "value": "rest2thrift/R4EWidget/removeWidget",
+      "enabled": true
+    },
+    {
+      "key": "searchWidgetTypes",
+      "value": "rest2thrift/R4EWidget/searchWidgetTypes",
+      "enabled": true
+    },
+    {
+      "key": "getWidgetType",
+      "value": "rest2thrift/R4EWidget/getWidgetType",
+      "enabled": true
+    },
+    {
+      "key": "r4e-inbox-ack-engine",
+      "value": "r4e-inbox-ack-engine.{{env}}.svc.reputation.test:8080",
+      "type": "default",
+      "enabled": true
+    },
+    {
+      "key": "r4e-inbox-hours-engine",
+      "value": "r4e-inbox-hours-engine.{{env}}.svc.reputation.test:8080",
+      "type": "default",
+      "enabled": true
+    },
+    {
+      "key": "saveAckMessage",
+      "value": "rest2thrift/R4EInboxAckEngine/saveAckMessage",
+      "type": "default",
+      "enabled": true
+    },
+    {
+      "key": "removeAckMessage",
+      "value": "rest2thrift/R4EInboxAckEngine/removeAckMessage",
+      "type": "default",
+      "enabled": true
+    },
+    {
+      "key": "saveBusinessHoursMessage",
+      "value": "rest2thrift/R4EInboxHoursEngine/saveBusinessHoursMessage",
+      "type": "default",
+      "enabled": true
+    },
+    {
+      "key": "removeBusinessHoursMessage",
+      "value": "rest2thrift/R4EInboxHoursEngine/removeBusinessHourMessage",
+      "type": "default",
+      "enabled": true
+    }
+  ],
+  "name": "Globals",
+  "_postman_variable_scope": "globals",
+  "_postman_exported_at": "2022-01-13T17:23:55.053Z",
+  "_postman_exported_using": "Postman/9.8.3"
+}

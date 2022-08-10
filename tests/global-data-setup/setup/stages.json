@@ -1,0 +1,34 @@
+[
+    {
+        "RequestHeader": {
+            "tenantID": 123000,
+            "agencyID": 4,
+            "loggedUserID": -1,
+            "loggedTenantID": -1,
+            "agencyID": 4
+        },
+        "stage": {
+            "tenantID": 123000,
+            "name": "Test Stage",
+            "system": false,
+            "order": 2000,
+            "onHold": false
+        }
+    },
+    {
+        "RequestHeader": {
+            "tenantID": 123010,
+            "loggedUserID": -1,
+            "loggedTenantID": -1,
+            "agencyID": 1
+        },
+        "stage": {
+            "id":"5f880d4a174ae1456675e0bd",
+            "tenantID": 123010,
+            "name": "Resurvey Stage",
+            "system": false,
+            "order": 2000,
+            "onHold": false
+        }
+    }
+]

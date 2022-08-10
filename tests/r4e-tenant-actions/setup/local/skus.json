@@ -1,0 +1,60 @@
+[
+    {
+        "RequestHeader": {
+          "agencyID": 203,
+          "loggedUserID": -1,
+          "loggedTenantID": -1
+        },
+        "sku": {
+          "id": "Actions-Local-SKU",
+          "name": "Actions-Local-SKU",
+          "moduleIDs":[       
+            "ticket-basic",
+            "ticket-managing",
+            "analytic-operating",
+            "analytic-reporting",
+            "analytic-voice-of-customer",
+            "competitive-insights-basic",
+            "analytic-traffic",
+            "kiosk-approving",
+            "kiosk-moderating",
+            "kiosk-monitoring",
+            "kiosk-responding",
+            "platform-customers",
+            "platform-dashboarding",
+            "platform-inbox",
+            "platform-managing",
+            "platform-review-booster",
+            "platform-search-accelerator",
+            "platform-suggested-responding",
+            "platform-syndication",
+            "score-basic",
+            "analytic-scoring",
+            "score-prescriptive",
+            "review-approving",
+            "review-moderating",
+            "review-monitoring",
+            "review-responding",
+            "survey-legacy-approving",
+            "survey-approving",
+            "survey3-approving",
+            "survey-legacy-moderating",
+            "survey-moderating",
+            "survey3-moderating",
+            "survey-legacy-monitoring",
+            "survey-monitoring",
+            "survey3-monitoring",
+            "survey-legacy-responding",
+            "survey-responding",
+            "survey3-responding",
+            "task-fulfilling"
+        ],
+          "sourceIDs": [
+            "KIOSK",
+            "SOCIAL",
+            "SURVEY",
+            "GOOGLE_PLACES"
+          ]
+        }
+      }
+]

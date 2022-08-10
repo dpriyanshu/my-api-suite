@@ -1,0 +1,28 @@
+[
+  {
+    "RequestHeader": {
+      "tenantID": 123000,
+      "userID": -1,
+      "loggedUserID": -1,
+      "loggedTenantID": -1
+    },
+    "tag": {
+      "id": "5f87e951174ae1000675e0af",
+      "name": "Tag One",
+      "system": false
+    }
+  },
+  {
+    "RequestHeader": {
+      "tenantID": 123000,
+      "userID": -1,
+      "loggedUserID": -1,
+      "loggedTenantID": -1
+    },
+    "tag": {
+      "id": "5f87e951174ae1000675e0b0",
+      "name": "Tag Two",
+      "system": false
+    }
+  }
+]

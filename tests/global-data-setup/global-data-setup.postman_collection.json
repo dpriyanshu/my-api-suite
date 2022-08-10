@@ -1,0 +1,1008 @@
+{
+  "info": {
+    "_postman_id": "86d8dbae-7a26-405c-98ca-dabeb6d7ea1c",
+    "name": "global-data-setup",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "SaveAgency",
+      "item": [
+        {
+          "name": "Save Agency",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "456143bc-df68-49f6-bd8e-8d1d138b2383",
+                "exec": [
+                  "if(pm.globals.get(\"singleDataFile\") == 'true'){",
+                  "//Attempting to read the payload from a third party file like JSON",
+                  " var agencyBody = data;",
+                  " console.log('Agency body is -> '+JSON.stringify(agencyBody));",
+                  " pm.environment.set(\"agencyBody\", JSON.stringify(agencyBody));",
+                  "}else{",
+                  " //Attempting to read the payload from a third party file like JSON",
+                  "",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "71b3357d-b57b-4bb9-af27-26af236a2848",
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "id": "53613263-903c-433f-b850-fe7dce627491",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{{agencyBody}}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "http://{{r4e-admin}}/{{saveAgency}}"
+          },
+          "response": []
+        }
+      ],
+      "id": "f65e9f6f-f83b-4341-9f83-4e3dfebd17a9"
+    },
+    {
+      "name": "SaveTenant",
+      "item": [
+        {
+          "name": "Save Tenant",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  "if(pm.globals.get(\"singleDataFile\") == 'true'){",
+                  "//Attempting to read the payload from a third party file like JSON",
+                  " var tenantsBody = data;",
+                  " console.log('Tenants body is -> '+JSON.stringify(tenantsBody));",
+                  " pm.environment.set(\"tenantBody\", JSON.stringify(tenantsBody));",
+                  "}else{",
+                  " //Attempting to read the payload from a third party file like JSON",
+                  "  pm.environment.set(\"tenants\", data.Tenants);",
+                  "  console.log('TenantsLength at Pre -> '+data.Tenants.length);",
+                  "for(var i = 0; i<data.Tenants.length; i++){",
+                  " var tenantsBody = data.Tenants[i];",
+                  " pm.environment.set(\"tenantBody\", JSON.stringify(tenantsBody));",
+                  " console.log('FiNaL iS -> '+pm.environment.get(\"tenantBody\")); ",
+                  "}",
+                  "",
+                  "}"
+                ],
+                "type": "text/javascript",
+                "id": "0ccede59-4bc7-4867-9554-91630f6389c0"
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test(\"Verify Success code\", function () {",
+                  "    var jsonData = pm.response.json();",
+                  "    pm.expect(jsonData.response.responseCode).to.eql(\"Success\");",
+                  "    var tenant = pm.response.json().tenant;",
+                  "    pm.expect(tenant).to.not.be.null;",
+                  "});",
+                  ""
+                ],
+                "type": "text/javascript",
+                "id": "c6ad6cae-6f64-44d9-bb28-6bf472e0e9cb"
+              }
+            }
+          ],
+          "id": "e9f51eba-e6c8-4ef0-b151-af16a9f2c66f",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{{tenantBody}}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "http://{{r4e-admin}}/{{createTenant}}"
+          },
+          "response": []
+        }
+      ],
+      "id": "d09f7c2d-df1d-405c-ab7a-0326a9eaef13"
+    },
+    {
+      "name": "SaveLocation",
+      "item": [
+        {
+          "name": "Create Locations",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  "if(pm.globals.get(\"singleDataFile\") == 'true'){",
+                  "//Attempting to read the payload from a third party file like JSON",
+                  " var locationsBody = data;",
+                  " console.log('Locations body is -> '+JSON.stringify(locationsBody));",
+                  " pm.environment.set(\"locationBody\", JSON.stringify(locationsBody));",
+                  "}else{",
+                  " //Attempting to read the payload from a third party file like JSON",
+                  " ",
+                  "}"
+                ],
+                "type": "text/javascript",
+                "id": "5474847f-e28e-41c5-95f3-26e7f7bc5e5b"
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test(\"Verify Success code\", function () {",
+                  "    var jsonData = pm.response.json();",
+                  "    pm.expect(jsonData.response.responseCode).to.eql(\"Success\");",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "id": "0f748eae-0bc0-4bed-bd47-4a25a1f6b325"
+              }
+            }
+          ],
+          "id": "f9b6655b-010a-4774-a775-236d0050a46f",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{{locationBody}}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "http://{{r4e-location-backend}}/{{saveLocation}}"
+          },
+          "response": []
+        }
+      ],
+      "id": "5e676aa9-ba4b-4736-8b39-22e83962d398"
+    },
+    {
+      "name": "SaveLocationPage",
+      "item": [
+        {
+          "name": "Save Location Pages",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  "if(pm.globals.get(\"singleDataFile\") == 'true'){",
+                  "//Attempting to read the payload from a third party file like JSON",
+                  " var locationPagesBody = data;",
+                  " console.log('Locations body is -> '+JSON.stringify(locationPagesBody));",
+                  " pm.environment.set(\"locationPagesBody\", JSON.stringify(locationPagesBody));",
+                  "}else{",
+                  " //Attempting to read the payload from a third party file like JSON",
+                  " ",
+                  "}"
+                ],
+                "type": "text/javascript",
+                "id": "c4427e85-c521-4880-839d-d4fd5ca9ce45"
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "id": "baa44c6c-5645-4c93-bce6-33fd3951a0fc"
+              }
+            }
+          ],
+          "id": "93085771-a7c6-4bca-80e1-b6eeed438a55",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{{locationPagesBody}}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "http://{{r4e-location}}/{{saveLocationPages}}"
+          },
+          "response": []
+        }
+      ],
+      "id": "6346e320-27c6-465d-b4b7-a3eeb2f1b108"
+    },
+    {
+      "name": "SaveUser",
+      "item": [
+        {
+          "name": "Search Roles",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  "if(pm.globals.get(\"singleDataFile\") == 'true'){",
+                  "//Attempting to read the payload from a third party file like JSON",
+                  " var usersBody = data;",
+                  " //Atempting to read users body",
+                  " console.log('## Raw Body ## -> '+ Object.keys(usersBody));",
+                  " //Extracting tenantID from users body and setting it as an environment variable",
+                  " console.log('### TenantID in loop ## -> '+usersBody.RequestHeader.tenantID);",
+                  " pm.environment.set(\"tenantID\", usersBody.RequestHeader.tenantID);",
+                  " //Extracting the roleIDs from the response and storing them into an array",
+                  " var roles=[];",
+                  " var roleNames = usersBody.user.roleIDs;",
+                  " roleNames.forEach((roleName)=>{",
+                  "    roles.push('\"'+roleName+'\"');",
+                  " });",
+                  " console.log(\"## Extracted Role Names from response -> \"+ roles);",
+                  " pm.environment.set(\"roles\", roles);",
+                  " console.log('## Users body before role id set is -> '+JSON.stringify(usersBody));",
+                  " pm.environment.set(\"usersBody\", JSON.stringify(usersBody));",
+                  " console.log('## Users body after role id set is -> '+JSON.stringify(usersBody));",
+                  "}else{",
+                  " //Attempting to read the payload from a third party file like JSON",
+                  "",
+                  "}"
+                ],
+                "type": "text/javascript",
+                "id": "6b93155c-426b-4a9e-b0aa-6df529cd7279"
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test(\"Verify Success code\", function () {",
+                  "    var jsonData = pm.response.json();",
+                  "    pm.expect(jsonData.response.responseCode).to.eql(\"Success\");",
+                  "});",
+                  "pm.test(\"Your test name\", function () {",
+                  "    var respBody = pm.response.json();",
+                  "    var roleIDs=[];",
+                  "    respBody.roles.forEach((role)=>{",
+                  "        roleIDs.push(role.id);",
+                  "    });",
+                  "    var usersBody = data;",
+                  "    console.log('#RoleIDs in Test ## -> '+roleIDs);",
+                  "    console.log('$$ Old userbody is -> '+JSON.stringify(usersBody));",
+                  "    usersBody.user.roleIDs = roleIDs;",
+                  "    console.log('New userbody is -> '+JSON.stringify(usersBody));",
+                  "    pm.environment.set('usersBodyWithRoleIDs',JSON.stringify(usersBody))",
+                  "});",
+                  "",
+                  ""
+                ],
+                "type": "text/javascript",
+                "id": "2ccafc7f-83a7-4660-b729-9d5afca55c2f"
+              }
+            }
+          ],
+          "id": "db261ab5-7149-40b7-b60f-2bd1dd6940c5",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"RequestHeader\": {\n            \"tenantID\": {{tenantID}}\n    },\n    \"searchRequest\": {\n        \"filters\": [\n            {\n                \"name\": \"__admin_role_name__\",\n                \"values\": [{{roles}}]\n            }\n        ]\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "http://{{r4e-admin}}/{{searchRoles}}"
+          },
+          "response": []
+        },
+        {
+          "name": "Create User",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  "// if(pm.globals.get(\"singleDataFile\") == 'true'){",
+                  "// //Attempting to read the payload from a third party file like JSON",
+                  "//  var usersBody = data;",
+                  "//  console.log('Users body is -> '+JSON.stringify(usersBody));",
+                  "//  pm.environment.set(\"usersBody\", JSON.stringify(usersBody));",
+                  "// }else{",
+                  "//  //Attempting to read the payload from a third party file like JSON",
+                  "",
+                  "// }",
+                  "",
+                  "console.log('body to pass # '+pm.environment.get(\"usersBodyWithRoleIDs\"));"
+                ],
+                "type": "text/javascript",
+                "id": "6c8dfe62-d59c-4d88-a0b9-9abc4337b71d"
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test(\"Verify Success code\", function () {",
+                  "    var respBody = pm.response.json();",
+                  "    pm.expect(respBody.response.responseCode).to.eql(\"Success\");",
+                  "    pm.environment.set('userId', respBody.user.id);",
+                  "    pm.environment.set('persistentToken', JSON.stringify(respBody.user.persistentToken));",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "id": "8d449fea-8fc8-417c-8725-325137b22c9d"
+              }
+            }
+          ],
+          "id": "2bfcff73-531e-4d5b-a32d-2d2a5a354a1d",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{{usersBodyWithRoleIDs}}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "http://{{r4e-user}}/{{saveUser}}"
+          },
+          "response": []
+        },
+        {
+          "name": "Change Password",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test(\"Verify Success code\", function () {",
+                  "    var respBody = pm.response.json();",
+                  "    pm.expect(respBody.response.responseCode).to.eql(\"Success\");",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "id": "fec1ae71-54ce-4530-a240-2d26a814ba8d"
+              }
+            }
+          ],
+          "id": "acdf17de-972b-411b-a373-3d79828c6314",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"changePasswordRequest\": {\n        \"userID\": {{userId}},\n        \"newPassword\": \"Password123%\",\n        \"firstChange\": true,\n        \"token\": {{persistentToken}}\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "http://{{r4e-user}}/{{changePassword}}"
+          },
+          "response": []
+        }
+      ],
+      "id": "e93ff7fe-0ce9-4805-8f01-c4ba0a67ee7b"
+    },
+    {
+      "name": "SaveRole",
+      "item": [
+        {
+          "name": "Save Roles",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  "if(pm.globals.get(\"singleDataFile\") == 'true'){",
+                  "//Attempting to read the payload from a third party file like JSON",
+                  " var rolesBody = data;",
+                  " console.log('Roles body is -> '+JSON.stringify(rolesBody));",
+                  " pm.environment.set(\"rolesBody\", JSON.stringify(rolesBody));",
+                  "}else{",
+                  " //Attempting to read the payload from a third party file like JSON",
+                  "",
+                  "}"
+                ],
+                "type": "text/javascript",
+                "id": "9bf29269-3e7c-4e2e-adce-b6d2b9dda4fd"
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Verify Success code\", function () {",
+                  "    var jsonData = pm.response.json();",
+                  "    pm.expect(jsonData.response.responseCode).to.eql(\"Success\");",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "id": "5164a11e-5850-4b69-9e8e-a9b66b23d98e"
+              }
+            }
+          ],
+          "id": "c3dc62ef-2579-49ec-8ac1-c9e71b541b42",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{{rolesBody}}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "httP://{{r4e-admin}}/{{saveRole}}"
+          },
+          "response": []
+        }
+      ],
+      "id": "a01ae00d-e4a4-4089-a13e-9e769c4c9e58"
+    },
+    {
+      "name": "SaveSku",
+      "item": [
+        {
+          "name": "Save SKU",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  "if(pm.globals.get(\"singleDataFile\") == 'true'){",
+                  "//Attempting to read the payload from a third party file like JSON",
+                  " var skuBody = data;",
+                  " console.log('SKU body is -> '+JSON.stringify(skuBody));",
+                  " pm.environment.set(\"skuBody\", JSON.stringify(skuBody));",
+                  "}else{",
+                  " //Attempting to read the payload from a third party file like JSON",
+                  "",
+                  "}"
+                ],
+                "type": "text/javascript",
+                "id": "c7545d84-5316-42b7-8906-ce25cf6a6cd3"
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test(\"Check status\", function () {    ",
+                  "    var errors = pm.response.json().errors;",
+                  "    pm.expect(errors).to.be.undefined;",
+                  "    var sku = pm.response.json().sku;",
+                  "    pm.expect(sku).to.not.be.null;",
+                  "});",
+                  "",
+                  ""
+                ],
+                "type": "text/javascript",
+                "id": "bfed61f1-ed0f-4ce1-a55d-6afdd04835bd"
+              }
+            }
+          ],
+          "id": "5fb547d0-7dc8-4571-a74e-d2293d12898f",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{{skuBody}}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "http://{{r4e-admin}}/{{saveSKU}}"
+          },
+          "response": []
+        }
+      ],
+      "id": "8d3ceb41-5c45-4959-9745-9ae7f1335a6a"
+    },
+    {
+      "name": "saveFeatureFlag",
+      "item": [
+        {
+          "name": "saveFeatureFlag",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  "if(pm.globals.get(\"singleDataFile\") == 'true'){",
+                  "//Attempting to read the payload from a third party file like JSON",
+                  " var featureflagPayLoad = data;",
+                  " console.log('featureflag PayLoad is -> '+JSON.stringify(featureflagPayLoad));",
+                  " pm.environment.set(\"featureflagPayLoad\", JSON.stringify(featureflagPayLoad));",
+                  "}else{",
+                  " //Attempting to read the payload from a third party file like JSON",
+                  " ",
+                  "}"
+                ],
+                "type": "text/javascript",
+                "id": "3b0cd869-ca9c-4753-97fe-b8a50398041f"
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Verify Success code\", function () {",
+                  "    var jsonData = pm.response.json();",
+                  "    pm.expect(jsonData.response.responseCode).to.eql(\"Success\");",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "id": "3f605be6-1304-4b6b-8c82-a3fa60330a47"
+              }
+            }
+          ],
+          "id": "a3d80022-b88f-4f4e-b8ef-43724351a6d9",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{{featureflagPayLoad}}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "http://{{r4e-admin}}/{{saveFeatureFlag}}"
+          },
+          "response": []
+        }
+      ],
+      "id": "73eb0204-1773-448c-b665-b8cc7656410f"
+    },
+    {
+      "name": "removeFeatureFlag",
+      "item": [
+        {
+          "name": "removeFeatureFlag",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  "if(pm.globals.get(\"singleDataFile\") == 'true'){",
+                  "//Attempting to read the payload from a third party file like JSON",
+                  " var removeFeatureflagPayLoad = data;",
+                  " console.log('remove Featureflag PayLoad is -> '+JSON.stringify(removeFeatureflagPayLoad));",
+                  " pm.environment.set(\"removeFeatureflagPayLoad\", JSON.stringify(removeFeatureflagPayLoad));",
+                  "}else{",
+                  " //Attempting to read the payload from a third party file like JSON",
+                  " ",
+                  "}"
+                ],
+                "type": "text/javascript",
+                "id": "9458bf1f-f847-4c11-96ed-31ae859f5315"
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Verify Success code\", function () {",
+                  "    var jsonData = pm.response.json();",
+                  "    pm.expect(jsonData.response.responseCode).to.eql(\"Success\");",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "id": "2d1f1b1c-0958-45e6-8ea8-cabf00d7c61a"
+              }
+            }
+          ],
+          "id": "a38f364d-ae30-4c5c-bc0e-d1f7c02fcd83",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{{removeFeatureflagPayLoad}}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "http://{{r4e-admin}}/{{removeFeatureFlag}}"
+          },
+          "response": []
+        }
+      ],
+      "id": "aac532c8-d7c3-4a54-aebb-f1d463cca92b"
+    },
+    {
+      "name": "saveAgencyUser",
+      "item": [
+        {
+          "name": "Search Roles",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "855dfcca-10ab-4f07-8f83-0115d9629438",
+                "exec": [
+                  "if(pm.globals.get(\"singleDataFile\") == 'true'){",
+                  "//Attempting to read the payload from a third party file like JSON",
+                  " var usersBody = data;",
+                  " //Atempting to read users body",
+                  " console.log('## Raw Body ## -> '+ Object.keys(usersBody));",
+                  " //Extracting tenantID from users body and setting it as an environment variable",
+                  " console.log('### agencyID in loop ## -> '+usersBody.RequestHeader.agencyID);",
+                  " pm.environment.set(\"agencyID\", usersBody.RequestHeader.agencyID);",
+                  " //Extracting the roleIDs from the response and storing them into an array",
+                  " var roles=[];",
+                  " var roleNames = usersBody.user.roleIDs;",
+                  " roleNames.forEach((roleName)=>{",
+                  "    roles.push('\"'+roleName+'\"');",
+                  " });",
+                  " console.log(\"## Extracted Role Names from response -> \"+ roles);",
+                  " pm.environment.set(\"roles\", roles);",
+                  " console.log('## Users body before role id set is -> '+JSON.stringify(usersBody));",
+                  " pm.environment.set(\"usersBody\", JSON.stringify(usersBody));",
+                  " console.log('## Users body after role id set is -> '+JSON.stringify(usersBody));",
+                  "}else{",
+                  " //Attempting to read the payload from a third party file like JSON",
+                  "",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "cb749c48-0f75-475d-b9fc-db64597e6c5e",
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test(\"Verify Success code\", function () {",
+                  "    var jsonData = pm.response.json();",
+                  "    pm.expect(jsonData.response.responseCode).to.eql(\"Success\");",
+                  "});",
+                  "pm.test(\"Your test name\", function () {",
+                  "    var respBody = pm.response.json();",
+                  "    var roleIDs=[];",
+                  "    respBody.roles.forEach((role)=>{",
+                  "        roleIDs.push(role.id);",
+                  "    });",
+                  "    var usersBody = data;",
+                  "    console.log('#RoleIDs in Test ## -> '+roleIDs);",
+                  "    console.log('$$ Old userbody is -> '+JSON.stringify(usersBody));",
+                  "    usersBody.user.roleIDs = roleIDs;",
+                  "    console.log('New userbody is -> '+JSON.stringify(usersBody));",
+                  "    pm.environment.set('usersBodyWithRoleIDs',JSON.stringify(usersBody))",
+                  "});",
+                  "",
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "id": "ce367562-f71d-4853-8e01-6147c673f6fb",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"RequestHeader\": {\n            \"agencyID\": {{agencyID}}\n    },\n    \"searchRequest\": {\n        \"filters\": [\n            {\n                \"name\": \"__admin_role_name__\",\n                \"values\": [{{roles}}]\n            }\n        ]\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "http://{{r4e-admin}}/{{searchRoles}}"
+          },
+          "response": []
+        },
+        {
+          "name": "Create User",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  "// if(pm.globals.get(\"singleDataFile\") == 'true'){",
+                  "// //Attempting to read the payload from a third party file like JSON",
+                  "//  var usersBody = data;",
+                  "//  console.log('Users body is -> '+JSON.stringify(usersBody));",
+                  "//  pm.environment.set(\"usersBody\", JSON.stringify(usersBody));",
+                  "// }else{",
+                  "//  //Attempting to read the payload from a third party file like JSON",
+                  "",
+                  "// }",
+                  "",
+                  "console.log('body to pass # '+pm.environment.get(\"usersBodyWithRoleIDs\"));"
+                ],
+                "type": "text/javascript",
+                "id": "5477940f-916e-4c79-811e-4cd41c203b35"
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test(\"Verify Success code\", function () {",
+                  "    var respBody = pm.response.json();",
+                  "    pm.expect(respBody.response.responseCode).to.eql(\"Success\");",
+                  "    pm.environment.set('userId', respBody.user.id);",
+                  "    pm.environment.set('persistentToken', JSON.stringify(respBody.user.persistentToken));",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "id": "a9b8d646-e7fe-4ecf-8656-834c675d4ce4"
+              }
+            }
+          ],
+          "id": "0cf625ed-570c-4a28-9a02-ca46b7feffd9",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{{usersBodyWithRoleIDs}}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "http://{{r4e-user}}/{{saveUser}}"
+          },
+          "response": []
+        },
+        {
+          "name": "Change Password",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test(\"Verify Success code\", function () {",
+                  "    var respBody = pm.response.json();",
+                  "    pm.expect(respBody.response.responseCode).to.eql(\"Success\");",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "id": "96f50db3-e3dc-4f7b-97c0-0b2dae373e88"
+              }
+            }
+          ],
+          "id": "ebdf9d8c-60c8-4359-9941-cd1d622f951b",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"changePasswordRequest\": {\n        \"userID\": {{userId}},\n        \"newPassword\": \"Password123%\",\n        \"firstChange\": true,\n        \"token\": {{persistentToken}}\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "http://{{r4e-user}}/{{changePassword}}"
+          },
+          "response": []
+        }
+      ],
+      "id": "fcd1543a-a095-403f-bb73-ce9963fccfc4"
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "id": "336f50ee-7634-44cf-8b5f-ea7ba1b68962",
+        "type": "text/javascript",
+        "exec": [""]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "id": "e86ff617-dfb6-4f02-b193-e27809a6ba70",
+        "type": "text/javascript",
+        "exec": [""]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "id": "7cc85fc3-9695-4ceb-ba34-6f3ba318769b",
+      "key": "r4e-admin",
+      "value": "r4e-admin.{{env}}.svc.reputation.test:8080",
+      "type": "string"
+    },
+    {
+      "id": "a60a6365-04f0-4e80-a5e7-6e408d49ddf2",
+      "key": "r4e-location-backend",
+      "value": "r4e-location-frontend.{{env}}.svc.reputation.test:8080",
+      "type": "string"
+    },
+    {
+      "id": "7e264a64-18e2-45b9-9532-c52415de0637",
+      "key": "r4e-user",
+      "value": "r4e-user.{{env}}.svc.reputation.test:8080",
+      "type": "string"
+    },
+    {
+      "id": "b6bb03f7-87e1-4d1f-83c0-f724199ff228",
+      "key": "saveAgency",
+      "value": "rest2thrift/R4EAdmin/saveAgency",
+      "type": "string"
+    },
+    {
+      "id": "08fcc96c-5d0e-4e5e-8d53-f2ecf7ba1e55",
+      "key": "createTenant",
+      "value": "rest2thrift/R4EAdmin/saveTenant",
+      "type": "string"
+    },
+    {
+      "id": "bdea560c-5cc2-4c3d-a676-dcdd9e0e8f56",
+      "key": "saveLocation",
+      "value": "rest2thrift/R4ELocation/saveLocation",
+      "type": "string"
+    },
+    {
+      "id": "2feaceb8-6c2b-4c7a-acff-412ef5a68d97",
+      "key": "searchRoles",
+      "value": "rest2thrift/R4EAdmin/searchRoles",
+      "type": "string"
+    },
+    {
+      "id": "6a668077-0f89-4d4c-a730-b4e4448138f9",
+      "key": "saveUser",
+      "value": "rest2thrift/R4EUser/saveUser",
+      "type": "string"
+    },
+    {
+      "id": "0894dc36-a28a-4a98-84c2-f03677076bf0",
+      "key": "changePassword",
+      "value": "rest2thrift/R4EUser/changePassword",
+      "type": "string"
+    },
+    {
+      "id": "ca0b64ad-1e49-451e-bf04-836ae84ff967",
+      "key": "saveRole",
+      "value": "rest2thrift/R4EAdmin/saveRole",
+      "type": "string"
+    },
+    {
+      "id": "0ad1d5e9-7cf9-40cb-825d-f47b9055ef48",
+      "key": "saveSKU",
+      "value": "rest2thrift/R4EAdmin/saveSku",
+      "type": "string"
+    },
+    {
+      "id": "5e2cb5f0-74d7-4fa9-b945-36d59a476545",
+      "key": "saveFeatureFlag",
+      "value": "rest2thrift/R4EAdmin/saveFeatureFlag",
+      "type": "string"
+    },
+    {
+      "id": "42412967-6dc0-4c83-9fb0-49365133f5d4",
+      "key": "removeFeatureFlag",
+      "value": "rest2thrift/R4EAdmin/removeFeatureFlag",
+      "type": "string"
+    }
+  ]
+}

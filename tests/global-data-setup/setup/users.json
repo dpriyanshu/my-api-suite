@@ -1,0 +1,65 @@
+[
+    {
+      "RequestHeader": {
+        "tenantID": 1100100,
+        "userID": -1,
+        "loggedUserID": -1,
+        "loggedTenantID": 1
+      },
+      "user": {
+        "email": "idc-automation+1100100test1@reputation.com",
+        "firstName": "IDC",
+        "lastName": "Automation",
+        "roleIDs": [
+          "Admin","User"
+        ],
+        "locale": "en_US",
+        "scopes": null,
+        "agencyID": 1,
+        "active": true,
+        "notified": true
+      }
+    },
+    {
+      "RequestHeader": {
+        "tenantID": 1100100,
+        "userID": -1,
+        "loggedUserID": -1,
+        "loggedTenantID": 1
+      },
+      "user": {
+        "email": "idc-automation+1100100test2@reputation.com",
+        "firstName": "IDC",
+        "lastName": "Automation",
+        "roleIDs": [
+          "Admin"
+        ],
+        "locale": "en_US",
+        "scopes": null,
+        "agencyID": 1,
+        "active": true,
+        "notified": true
+      }
+    },
+    {
+      "RequestHeader": {
+        "tenantID": 2100100,
+        "userID": -1,
+        "loggedUserID": -1,
+        "loggedTenantID": 1
+      },
+      "user": {
+        "email": "idc-automation+2100100test1@reputation.com",
+        "firstName": "IDC",
+        "lastName": "Automation",
+        "roleIDs": [
+          "Admin","User"
+        ],
+        "locale": "en_US",
+        "scopes": null,
+        "agencyID": 1,
+        "active": true,
+        "notified": true
+      }
+    }
+]

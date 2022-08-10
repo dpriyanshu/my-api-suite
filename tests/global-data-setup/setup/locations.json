@@ -1,0 +1,140 @@
+[
+  {
+    "RequestHeader": {
+      "tenantID": 1100100
+    },
+    "saveLocationRequest": {
+      "location": {
+        "code": "NSL1",
+        "tenantID": 1100100,
+        "address": {
+          "streetAddress": "1766 Palo Verde Ave",
+          "locality": "East Palo Alto",
+          "region": "CA",
+          "postalCode": "94303",
+          "country": "US"
+        },
+        "publicName": "Demo Location 1(DL1)",
+        "internalName": "Demo Location 1(DL1)",
+        "web": "http://www.g.com",
+        "logo": "https://assets.e2e.reputation.com/assets/3517186c11c/small_logo__1605268346851.jpg"
+      },
+      "fields": []
+    }
+  },
+  {
+    "RequestHeader": {
+      "tenantID": 1100101
+    },
+    "saveLocationRequest": {
+      "location": {
+        "code": "NSL2",
+        "tenantID": 1100101,
+        "address": {
+          "streetAddress": "1766 Palo Verde Ave",
+          "locality": "East Palo Alto",
+          "region": "CA",
+          "postalCode": "94303",
+          "country": "US"
+        },
+        "publicName": "Demo Location 2(DL2)",
+        "internalName": "Demo Location 2(DL2)",
+        "web": "http://www.g.com",
+        "logo": "https://assets.e2e.reputation.com/assets/3517186c11c/small_logo__1605268346851.jpg"
+      },
+      "fields": []
+    }
+  },
+    {
+    "RequestHeader": {
+      "tenantID": 2100101
+    },
+    "saveLocationRequest": {
+      "location": {
+        "code": "ANSL2",
+        "tenantID": 2100101,
+        "address": {
+          "streetAddress": "1766 Palo Verde Ave",
+          "locality": "East Palo Alto",
+          "region": "CA",
+          "postalCode": "94303",
+          "country": "US"
+        },
+        "publicName": "NDemo Location 2(DL2)",
+        "internalName": "NDemo Location 2(DL2)",
+        "web": "http://www.g.com",
+        "logo": "https://assets.e2e.reputation.com/assets/3517186c11c/small_logo__1605268346851.jpg"
+      },
+      "fields": []
+    }
+  },
+      {
+    "RequestHeader": {
+      "tenantID": 2100102
+    },
+    "saveLocationRequest": {
+      "location": {
+        "code": "ANCSL2",
+        "tenantID": 2100102,
+        "address": {
+          "streetAddress": "1766 Palo Verde Ave",
+          "locality": "East Palo Alto",
+          "region": "CA",
+          "postalCode": "94303",
+          "country": "US"
+        },
+        "publicName": "NCDemo Location 2(DL2)",
+        "internalName": "NCDemo Location 2(DL2)",
+        "web": "http://www.g.com",
+        "logo": "https://assets.e2e.reputation.com/assets/3517186c11c/small_logo__1605268346851.jpg"
+      },
+      "fields": []
+    }
+  },
+      {
+    "RequestHeader": {
+      "tenantID": 2100103
+    },
+    "saveLocationRequest": {
+      "location": {
+        "code": "ANASL2",
+        "tenantID": 2100103,
+        "address": {
+          "streetAddress": "1766 Palo Verde Ave",
+          "locality": "East Palo Alto",
+          "region": "CA",
+          "postalCode": "94303",
+          "country": "US"
+        },
+        "publicName": "NBDemo Location 2(DL2)",
+        "internalName": "NBDemo Location 2(DL2)",
+        "web": "http://www.g.com",
+        "logo": "https://assets.e2e.reputation.com/assets/3517186c11c/small_logo__1605268346851.jpg"
+      },
+      "fields": []
+    }
+  },
+   {
+    "RequestHeader": {
+      "tenantID": 2100104
+    },
+    "saveLocationRequest": {
+      "location": {
+        "code": "ANBSL2",
+        "tenantID": 2100104,
+        "address": {
+          "streetAddress": "1766 Palo Verde Ave",
+          "locality": "East Palo Alto",
+          "region": "CA",
+          "postalCode": "94303",
+          "country": "US"
+        },
+        "publicName": "NADemo Location 2(DL2)",
+        "internalName": "NADemo Location 2(DL2)",
+        "web": "http://www.g.com",
+        "logo": "https://assets.e2e.reputation.com/assets/3517186c11c/small_logo__1605268346851.jpg"
+      },
+      "fields": []
+    }
+  }
+]

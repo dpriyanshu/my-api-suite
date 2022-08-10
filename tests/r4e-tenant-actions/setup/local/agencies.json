@@ -1,0 +1,58 @@
+[
+    {
+        "RequestHeader": {
+        },
+        "agency":{
+            "id": 203,
+            "active": true,
+	        "name": "Tenant Actions - Local",
+            "apiKey": "JSp7r6vqvxBA8DvFkAzn6hYO4ayQVO3xKwi1RW4g607720512852817uxE4JffM3sqnhoH50qvDxt5pmCU6prcnbeMrvsWs",
+            "moduleIDs":[       
+                "ticket-basic",
+                "ticket-managing",
+                "analytic-operating",
+                "analytic-reporting",
+                "analytic-voice-of-customer",
+                "competitive-insights-basic",
+                "analytic-traffic",
+                "kiosk-approving",
+                "kiosk-moderating",
+                "kiosk-monitoring",
+                "kiosk-responding",
+                "platform-configuring",
+                "platform-customers",
+                "platform-dashboarding",
+                "platform-inbox",
+                "platform-managing",
+                "platform-review-booster",
+                "platform-search-accelerator",
+                "platform-suggested-responding",
+                "platform-syndication",
+                "score-basic",
+                "analytic-scoring",
+                "score-prescriptive",
+                "review-approving",
+                "review-moderating",
+                "review-monitoring",
+                "review-responding",
+                "survey-legacy-approving",
+                "survey-approving",
+                "survey3-approving",
+                "survey-legacy-moderating",
+                "survey-moderating",
+                "survey3-moderating",
+                "survey-legacy-monitoring",
+                "survey-monitoring",
+                "survey3-monitoring",
+                "survey-legacy-responding",
+                "survey-responding",
+                "survey3-responding",
+                "task-fulfilling"
+            ],
+            "requestsPerSecond": 0,
+            "tenantType": "Enterprise",
+            "credentialMatchStrategy": "Agency",
+            "whiteLabeled": true
+        }
+    }
+]

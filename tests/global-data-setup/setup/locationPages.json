@@ -1,0 +1,22 @@
+[
+  {
+    "RequestHeader": {
+      "tenantID": 1100101
+    },
+    "saveLocationPagesRequest": {
+      "locationPages": {
+        "code": "SL1",
+        "locationUid": 300801,
+        "locationID": "1100101_SL1",
+        "pages": [
+          {
+            "sourceID": "FACEBOOK",
+            "sourceUid": 700,
+            "url": "https://www.facebook.com/abcdxyz-123456789300801"
+          }
+        ]
+      },
+      "fields": []
+    }
+  }
+]

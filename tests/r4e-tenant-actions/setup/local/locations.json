@@ -1,0 +1,90 @@
+[
+    {
+        "RequestHeader": {
+            "tenantID": 4002001
+        },
+        "saveLocationRequest": {
+            "location": {
+                "code": "TAL2",
+                "tenantID": 4002001,
+                "address": {
+                    "streetAddress": "1766 Palo Verde Ave",
+                    "locality": "East Palo Alto",
+                    "region": "CA",
+                    "postalCode": "94303",
+                    "country": "US"
+                },
+                "publicName": "Tenant Actions Location 2",
+                "internalName": "Tenant Actions Location 2",
+                "enableRequestReviews": true
+            },
+            "fields": []
+        }
+    },
+    {
+        "RequestHeader": {
+            "tenantID": 4002001
+        },
+        "saveLocationRequest": {
+            "location": {
+                "code": "TARL1",
+                "tenantID": 4002001,
+                "address": {
+                    "streetAddress": "1766 Palo Verde Ave",
+                    "locality": "East Palo Alto",
+                    "region": "CA",
+                    "postalCode": "94303",
+                    "country": "US"
+                },
+                "publicName": "Tenant Actions Reviews Local 1",
+                "internalName": "Tenant Actions Reviews Local 1",
+                "enableRequestReviews": true
+            },
+            "fields": []
+        }
+    },
+    {
+        "RequestHeader": {
+            "tenantID": 4002001
+        },
+        "saveLocationRequest": {
+            "location": {
+                "code": "TALocationLocal1",
+                "tenantID": 4002001,
+                "address": {
+                    "streetAddress": "1766 Palo Verde Ave",
+                    "locality": "East Palo Alto",
+                    "region": "CA",
+                    "postalCode": "94303",
+                    "country": "US"
+                },
+                "publicName": "Tenant Actions Location ID Local 1",
+                "internalName": "Tenant Actions Location ID Local 1",
+                "enableRequestReviews": true
+            },
+            "fields": []
+        }
+    },
+    {
+        "RequestHeader": {
+            "tenantID": 4002001
+        },
+        "saveLocationRequest": {
+            "location": {
+                "code": "TALocationLocal2",
+                "tenantID": 4002001,
+                "address": {
+                    "streetAddress": "1766 Palo Verde Ave",
+                    "locality": "East Palo Alto",
+                    "region": "CA",
+                    "postalCode": "94303",
+                    "country": "US"
+                },
+                "publicName": "Tenant Actions Location ID Local 2",
+                "internalName": "Tenant Actions Location ID Local 2",
+                "enableRequestReviews": true
+            },
+            "fields": []
+        }
+    }
+]

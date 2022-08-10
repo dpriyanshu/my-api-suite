@@ -1,0 +1,23 @@
+[
+  {
+    "RequestHeader": {
+      "tenantID": 4001001,
+      "userID": -1,
+      "loggedUserID": -1,
+      "loggedTenantID": 1
+    },
+    "user": {
+      "email": "r4e-tenant-actions_postman_suite+4001001@reputation.com",
+      "firstName": "Tenant Actions",
+      "lastName": "User",
+      "roleIDs": [
+        "Admin"
+      ],
+      "locale": "en_US",
+      "scopes": null,
+      "agencyID": "103",
+      "active": true,
+      "notified": false
+    }
+  }
+]

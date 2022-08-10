@@ -1,0 +1,144 @@
+[
+{
+    "RequestHeader": {
+        "agencyID": 103,
+        "locale": "en_US"
+    },
+    "tenant": {
+        "id": 4001001,
+        "name": "Actions Suite Tenant",
+        "externalID": "Actions Suite Tenant",
+        "skuIDs": [
+            "Actions-Suite-SKU"
+        ],
+        "industry": "automotive-automotive-other",
+        "active": true,
+        "accountType": "QA",
+        "tenantType": "Enterprise",
+        "api": {
+            "enabled": true
+        },
+        "logo": "https://assets.e2e.reputation.com/assets/3517186c11c/tenant_logo__1605268209541.jpg",
+        "attributeDefinitions": [
+            {
+                "name": "state",
+                "label": "State",
+                "multiSelect": true,
+                "custom": false,
+                "sortable": true,
+                "visible": true,
+                "restricted": false,
+                "order": 1,
+                "modules": null
+            },
+            {
+                "name": "city",
+                "label": "City",
+                "multiSelect": true,
+                "custom": false,
+                "sortable": true,
+                "visible": true,
+                "restricted": false,
+                "order": 2,
+                "modules": null
+            },
+            {
+                "name": "location",
+                "label": "Location",
+                "multiSelect": true,
+                "custom": false,
+                "sortable": true,
+                "visible": true,
+                "restricted": false,
+                "order": 3,
+                "modules": null
+            },
+            {
+                "name": "country",
+                "label": "Country",
+                "multiSelect": true,
+                "custom": false,
+                "sortable": true,
+                "visible": true,
+                "restricted": false,
+                "order": 4,
+                "modules": null
+            },
+            {
+                "name": "source",
+                "label": "Source",
+                "multiSelect": true,
+                "custom": false,
+                "sortable": true,
+                "visible": true,
+                "restricted": false,
+                "order": 5,
+                "modules": null
+            },
+            {
+                "name": "date",
+                "label": "Date Range",
+                "multiSelect": false,
+                "custom": false,
+                "sortable": false,
+                "visible": true,
+                "restricted": false,
+                "order": 6,
+                "modules": null
+            }
+        ],
+        "sourceGroups": [
+            "Kiosk",
+            "SOCIAL",
+            "SURVEY",
+            "Google Local"
+        ],
+        "moduleIDs": [
+            "ticket-basic",
+            "ticket-managing",
+            "analytic-operating",
+            "analytic-experience",
+            "analytic-reporting",
+            "analytic-voice-of-customer",
+            "competitive-insights-basic",
+            "analytic-traffic",
+            "kiosk-approving",
+            "kiosk-moderating",
+            "kiosk-monitoring",
+            "kiosk-responding",
+            "platform-customers",
+            "platform-dashboarding",
+            "platform-inbox",
+            "platform-managing",
+            "platform-review-booster",
+            "platform-search-accelerator",
+            "platform-suggested-responding",
+            "platform-syndication",
+            "score-basic",
+            "analytic-scoring",
+            "score-prescriptive",
+            "review-approving",
+            "review-moderating",
+            "review-monitoring",
+            "review-responding",
+            "survey-legacy-approving",
+            "survey-approving",
+            "survey3-approving",
+            "survey3-basic",
+            "survey3-conversational",
+            "survey-legacy-moderating",
+            "survey-moderating",
+            "survey3-moderating",
+            "survey-legacy-monitoring",
+            "survey-monitoring",
+            "survey3-monitoring",
+            "survey-legacy-responding",
+            "survey-responding",
+            "survey3-responding",
+            "task-fulfilling"
+        ],
+        "agencyID": 103,
+        "waitDaysForNewRequests": 1
+    }
+}
+]
