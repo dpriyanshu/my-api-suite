@@ -1,0 +1,11 @@
+{
+  "apiKey": "PMAK-62a358c150938d3e8e151cb4-af54ca1f351ad21363340a487dc7a0b77a",
+  "suite": {
+    "agency_actions": "14261760-01b0802e-7759-4f3a-a687-d0af709e54ff",
+    "tenant_actions": "14261760-c1cee5cf-f554-4197-b752-be0dfbbf5c13"
+  },
+  "local": {
+    "agency_actions": "14261760-f7dfb265-452f-4b75-96c6-f45bfe31ad62",
+    "tenant_actions": "14261760-6aad6f50-be93-4cd5-9549-aae32992de0f"
+  }
+}
